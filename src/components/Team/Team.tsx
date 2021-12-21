@@ -1,4 +1,3 @@
-import cx from 'classnames'
 import { useEffect, useState } from 'react'
 
 import Sailor from '../../Types/Sailor'

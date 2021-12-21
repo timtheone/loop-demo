@@ -1,5 +1,4 @@
 import timeline from '../../assets/Timeline.jpg'
-import timeline2 from '../../assets/timelinepng.png'
 import styles from './About.module.scss'
 
 export default function About() {
@@ -44,7 +43,7 @@ export default function About() {
           labore et dolore magnam aliquam quaerat voluptatem.
         </p>
       </div>
-      <img className={styles.timeline} src={timeline2} alt="Timeline" />
+      <img className={styles.timeline} src={timeline} alt="Timeline" />
       <div className={styles.divider}></div>
     </section>
   )
