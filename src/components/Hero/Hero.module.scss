@@ -1,0 +1,44 @@
+@import '@styles/media-queries';
+.root {
+  position: relative;
+}
+
+.heroImage {
+  width: 100%;
+  clip-path: polygon(100% 0, 100% 89%, 50% 100%, 0 89%, 0 0);
+}
+
+.heroText {
+  position: absolute;
+  top: 20%;
+  width: auto;
+  right: 0;
+  text-align: center;
+  @include matchSmall {
+    right: 10%;
+    width: 466px;
+  }
+}
+
+.heroTitle {
+  color: var(--primary-color);
+  font-size: 30px;
+  font-weight: bold;
+  @include matchXSmall {
+    font-size: 45px;
+  }
+  @include matchSmall {
+    font-size: 66px;
+  }
+}
+
+.heroSubline {
+  font-size: 13px;
+  font-weight: bold;
+  @include matchXSmall {
+    font-size: 16px;
+  }
+  @include matchSmall {
+    font-size: 20px;
+  }
+}

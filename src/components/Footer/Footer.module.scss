@@ -1,0 +1,42 @@
+@import '@styles/media-queries';
+
+.root {
+  background-color: #e5eaee;
+  padding: 30px 20px 15px;
+  @include matchSmall {
+    padding: 50px 20px;
+  }
+}
+
+.list {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+  gap: 30px;
+
+  @include matchSmall {
+    flex-direction: row;
+  }
+
+  li {
+    cursor: pointer;
+  }
+}
+
+.linksList {
+  display: flex;
+  gap: 5px;
+}
+.icons {
+  display: flex;
+  gap: 15px;
+  svg {
+    cursor: pointer;
+  }
+}
+.rightsDisclaimer {
+  color: #727272;
+}

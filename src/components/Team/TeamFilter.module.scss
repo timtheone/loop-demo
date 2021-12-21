@@ -1,0 +1,50 @@
+@import '@styles/media-queries';
+
+.filtersContainer {
+  display: flex;
+  gap: 10px;
+  @include matchXSmall {
+    gap: 30px;
+  }
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.concealedSwitch {
+  display: none;
+}
+.clickableLabel {
+  font-size: 15px;
+  font-weight: bold;
+  opacity: 0.4;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: bold;
+  position: relative;
+
+  &::first-letter {
+    text-transform: capitalize;
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: -7px;
+    left: 0;
+    background-color: #fff;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+}
+
+.clickableLabel__active {
+  opacity: 1;
+  &:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+}
