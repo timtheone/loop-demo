@@ -1,0 +1,84 @@
+@import '@styles/media-queries.scss';
+
+.root {
+  display: flex;
+  position: relative;
+  justify-content: start;
+  background-color: var(--primary-color);
+  padding: 3px 0;
+  @include matchSmall {
+    padding: 0;
+    background-color: #fff;
+    justify-content: space-between;
+  }
+}
+
+.list {
+  padding: 25px 5px 25px 30px;
+  list-style-type: none;
+  display: none;
+  column-gap: 25px;
+
+  @include matchSmall {
+    display: flex;
+  }
+
+  li {
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bold;
+    position: relative;
+  }
+
+  li:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--primary-color);
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+
+  li:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+}
+
+.logoContainer {
+  width: calc(253px + 30px);
+  margin: 0 auto;
+  padding: 0;
+  align-items: center;
+  column-gap: 15px;
+  color: white;
+  background-color: var(--primary-color);
+  display: flex;
+  @include matchSmall {
+    padding: 0px 40px 0 70px;
+    margin: unset;
+    width: unset;
+  }
+}
+
+.branding {
+  font-size: 30px;
+  font-weight: bold;
+  text-transform: uppercase;
+  span {
+    font-weight: normal;
+  }
+}
+
+.sidebarButton {
+  display: block;
+  margin: 15px;
+  color: #fff;
+  @include matchSmall {
+    display: none;
+  }
+}

@@ -1,0 +1,195 @@
+@import '@styles/media-queries';
+
+.newsCards {
+  display: flex;
+}
+
+.root,
+.root3 {
+  display: grid;
+  margin-top: -86px;
+  grid-template-columns: auto;
+  @include matchSmall {
+    grid-template-columns: repeat(2, 50%);
+  }
+}
+
+.root {
+  margin-top: -86px;
+}
+
+.root2 {
+  display: grid;
+  grid-template-columns: auto;
+  @include matchMedium {
+    grid-template-columns: repeat(2, 50%);
+  }
+}
+
+.cardTitle {
+  color: var(--primary-color);
+  font-size: 20px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.cardText {
+  font-size: 15px;
+}
+
+.grayCard {
+  background-color: #e5eaee;
+  .cardText {
+    color: #000;
+  }
+}
+
+.blackCard {
+  background-color: #000;
+  .cardText {
+    color: #e5eaee;
+  }
+}
+
+.calendarWrapper {
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 5px;
+  color: #717171;
+  .calendarText {
+    margin-left: 10px;
+    font-size: 15px;
+    font-weight: bold;
+  }
+}
+
+.mapCardClipped {
+  padding: 40px 40px 20px 40px;
+  @include matchSmall {
+    padding: 138px 100px 10px 40px;
+  }
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url('../../assets/Map_1.jpg');
+}
+
+.mapCardText {
+  &_title {
+    font-size: 40px;
+  }
+
+  &_headline {
+    font-size: 22px;
+    color: var(--primary-color);
+  }
+
+  &_subtitle {
+    font-size: 16px;
+    font-weight: 400;
+  }
+
+  @include matchMedium {
+    &_title {
+      font-size: 3.4vw;
+    }
+
+    &_headline {
+      font-size: 2.2vw;
+    }
+
+    &_subtitle {
+      font-size: 1.4vw;
+    }
+  }
+
+  @include matchLarge {
+    &_title {
+      font-size: 50px;
+    }
+
+    &_headline {
+      font-size: 30px;
+    }
+
+    &_subtitle {
+      font-size: 20px;
+    }
+  }
+}
+
+.mapCard {
+  height: unset;
+  padding-bottom: 20px;
+  padding-right: 20px;
+  @include matchSmall {
+    height: 50%;
+    padding-bottom: unset;
+  }
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url('../../assets/Map_2.jpg');
+
+  .mapCardText {
+    &_title {
+      padding-top: 40px;
+      padding-bottom: 10px;
+    }
+
+    &_subtitle {
+      font-weight: bold;
+      padding-bottom: 10px;
+    }
+
+    &_title,
+    &_headline,
+    &_subtitle,
+    &_description {
+      padding-left: 40px;
+    }
+  }
+}
+
+.boatImage {
+  width: 100%;
+}
+
+.mapCardImages {
+  img {
+    width: 50%;
+  }
+}
+
+.cardHorizontal {
+  background-color: black;
+  height: 280px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &_content {
+    color: #fff;
+    text-align: center;
+
+    &_calendar {
+      svg {
+        width: 40px;
+        height: 40px;
+      }
+    }
+
+    &_title {
+      font-size: 30px;
+      width: 211px;
+      word-break: break-all;
+    }
+  }
+}
+
+.cardHorizontalWithImage {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url('../../assets/BoatSliced.jpg');
+  .cardHorizontal_content_title {
+    width: 125px;
+  }
+}

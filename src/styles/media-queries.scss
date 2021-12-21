@@ -1,0 +1,28 @@
+$breakpointExtraSmall: 475px;
+$breakpointSmall: 768px;
+$breakpointMedium: 1024px;
+$breakpointLarge: 1400px;
+
+@mixin matchXSmall {
+  @media screen and (min-width: $breakpointExtraSmall) {
+    @content;
+  }
+}
+
+@mixin matchSmall {
+  @media screen and (min-width: $breakpointSmall) {
+    @content;
+  }
+}
+
+@mixin matchMedium {
+  @media screen and (min-width: $breakpointMedium) {
+    @content;
+  }
+}
+
+@mixin matchLarge {
+  @media screen and (min-width: $breakpointLarge) {
+    @content;
+  }
+}

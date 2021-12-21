@@ -1,0 +1,68 @@
+@import '@styles/media-queries';
+
+.title {
+  margin-top: 50px;
+  font-size: 50px;
+  text-align: center;
+}
+
+.subtitle {
+  font-size: 20px;
+  text-align: center;
+  border-bottom: 1px solid #bbbbbb;
+  width: 50%;
+  padding-bottom: 20px;
+  margin: 20px auto 0;
+  @include matchSmall {
+    width: 30%;
+  }
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  padding: 50px 15px;
+  gap: 20px;
+  p {
+    width: 100%;
+    @include matchSmall {
+      width: 50%;
+    }
+  }
+  @include matchSmall {
+    flex-direction: row;
+    padding: 50px 100px;
+    gap: 50px;
+  }
+  color: #727272;
+  font-size: 15px;
+}
+
+.timeline {
+  margin-top: -65px;
+  @include matchSmall {
+    margin-top: -100px;
+  }
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.divider {
+  clip-path: polygon(100% 11%, -90% 100%, 100% 100%);
+  margin-top: -89px;
+
+  @include matchXSmall {
+    clip-path: polygon(100% 11%, -37% 100%, 100% 100%);
+    margin-top: -126px;
+  }
+
+  @include matchSmall {
+    clip-path: polygon(100% 0%, 0 100%, 100% 100%);
+    margin-top: -157px;
+  }
+  height: 160px;
+  background-color: black;
+  z-index: 0;
+  position: relative;
+}
